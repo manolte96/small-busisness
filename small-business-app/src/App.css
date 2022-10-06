@@ -6,50 +6,6 @@
   text-align: center;
 }
 
-/* Login CSS */
-.login-form-container {
-  max-width: 500px;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Navigation Bar CSS */
-
-.nav-list {
-  display: flex;
-  flex-direction: row;
-}
-
-.nav-list-item {
-  list-style-type: none;
-  margin: 0 1.5em;
-}
-
-.nav-list-item a {
-  text-decoration: none;
-  color: white;
-}
-
-.nav-list-container-loggedIn {
-  margin: 0;
-  width: 100vw;
-  background: lightgray;
-  padding: .5em 1em;
-}
-
-li {
-  list-style: none;
-}
-
-.businessListHome {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
 
 

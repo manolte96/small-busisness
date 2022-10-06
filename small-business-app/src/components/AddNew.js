@@ -18,21 +18,6 @@ class addNew extends Component {
 
     toggleDialog = () => this.setState({ open: !this.state.open })
 
-    handleTextChange = (e) => {
-        const newState = { ...this.state }
-        newState[e.target.id] = e.target.value
-        this.setState(newState)
-    }
-
-    handleSubmit = (e) => {
-        e.preventDefault()
-        const payload = { ...this.state }
-        payload.id = this.props.businessTotal + 1
-        delete payload.open
-        this.props.addBusiness(payload)
-        this.setState({ open: false })
-    }
-
     componentDidUpdate = (prevProps, prevState) => {
         if (prevState.open !== this.state.open) {
             this.setState({
@@ -61,35 +46,8 @@ class addNew extends Component {
                     <Dialog open={this.state.open} onClose={this.toggleDialog} >
                         <DialogTitle>Add a New Business</DialogTitle>
                         <DialogContent>
-                            <form 
-                                onSubmit={this.handleSubmit}
-                                style={{ display: 'flex', flexDirection: 'column', width: '350px' }}>
-                                <TextField 
-                                    id="name" 
-                                    placeholder="Name" 
-                                    value={this.state.name} 
-                                    onChange={this.handleTextChange} 
-                                    required />
-                                <TextField 
-                                    id="description" 
-                                    placeholder="Description" 
-                                    value={this.state.description} 
-                                    onChange={this.handleTextChange} 
-                                    required />
-                                <TextField 
-                                    id="address" 
-                                    placeholder="Address" 
-                                    value={this.state.address} 
-                                    onChange={this.handleTextChange} 
-                                    required />
-                                <TextField 
-                                    id="hours" 
-                                    placeholder="Hours" 
-                                    value={this.state.hours} 
-                                    onChange={this.handleTextChange} 
-                                    required />
-                                <br />
-                                <Button variant="contained" color="primary" type="submit">Submit</Button>
+                            <form>
+                                <TextField />
                             </form>
                         </DialogContent>
                     </Dialog>

@@ -4,6 +4,7 @@ import './App.css'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './redux/store'
+import { Businesses } from 'components/Businesses';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <Nav />
+        <Businesses />
       </BrowserRouter>
     </Provider>
   );
